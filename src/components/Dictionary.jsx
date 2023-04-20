@@ -43,7 +43,7 @@ function Dictionary(props) {
 
   function load() {
 		setLoaded(true);
-		// search();
+		search();
 	}
 
   if (loaded) {
