@@ -23,10 +23,12 @@ function Dictionary(props) {
 		let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${keyword}`;
 		axios.get(apiUrl).then(handleDictionResponse);
 
-    let pexelsApiKey = 'dlsf3WjPhNq7C7joEQ6xdEzJcqChJkJfSXKtewAHYudsFWiaMCjEA0U2';
+    let pexelsApiKey = 'eac360db5fc86ft86450f3693e73o43f'
+			//'dlsf3WjPhNq7C7joEQ6xdEzJcqChJkJfSXKtewAHYudsFWiaMCjEA0U2';
 			//'563492ad6f9170000100000181b32e908bd9455b9d3991048bc0149f';			
 			// '563492ad6f91700001000001fdd29f0808df42bd90c33f42e128fa89';
-		let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=9`;
+		//let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=9`;
+	  	let pexelsApiUrl = `https://api.shecodes.io/images/v1/search?query=${keyword}&key=${apiKey}`;
 		let headers = { Authorization: `Bearer ${pexelsApiKey}` };
 		axios.get(pexelsApiUrl, { headers: headers }).then(handlePexelsResponse);
 	}
